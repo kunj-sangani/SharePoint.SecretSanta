@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "admin-secret-santa-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/adminSecretSanta/AdminSecretSantaWebPart.js",
+          "manifest": "./src/webparts/adminSecretSanta/AdminSecretSantaWebPart.manifest.json"
+        }
+      ]
+    },
+    "user-secret-santa-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/userSecretSanta/UserSecretSantaWebPart.js",
+          "manifest": "./src/webparts/userSecretSanta/UserSecretSantaWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "AdminSecretSantaWebPartStrings": "lib/webparts/adminSecretSanta/loc/{locale}.js",
+    "UserSecretSantaWebPartStrings": "lib/webparts/userSecretSanta/loc/{locale}.js",
+    "ControlStrings": "node_modules/@pnp/spfx-controls-react/lib/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}
